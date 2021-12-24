@@ -1,5 +1,15 @@
+const reverse = (word) => {
+  // const wordArray = word.split("")
+  // const reversedWordArray = wordArray.reverse()
+  // const reversedword = reversedWordArray.join("")
+  //return reversedword
+  return word.split("").reverse().join("")
+}
+
+
 function isPalindrome(word) {
-  // Write your algorithm here
+  const reversedword = reverse(word)
+  return word === reversedword
 }
 
 /* 
@@ -15,7 +25,7 @@ if (require.main === module) {
   // add your own custom tests in here
   console.log("Expecting: true");
   console.log("=>", isPalindrome("racecar"));
-
+  console.log('=>', isPalindrome('noon'))
   console.log("");
 
   console.log("Expecting: false");
